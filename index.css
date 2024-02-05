@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --Pink:#ff4686;
+    --Yellow:#fffe01;
+    --White:#fffdff;
+    --Blue:#2ea1fe;
+    --Green:#00fe00;
+}
+.Main-Section{
+    height: 100vh;
+    width:100%;
+    background-color: var(--Pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: Color-Animation 4s steps(1) infinite;
+}
+.Main-Section .Content-Wrapper{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+.Content-Wrapper div{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 4px solid black;
+}
+.Content-Wrapper div:nth-child(4){
+    top: -96px;
+   animation: Squares-Movement-Child-4 1s ease infinite; 
+}
+.Content-Wrapper div:nth-child(5){
+    bottom: -196px;
+    animation: Squares-Movement-Child-5 1s ease infinite; 
+}
+.Content-Wrapper div:nth-child(3){
+    right: -196px;
+    animation: Squares-Movement-Child-3 1s ease infinite; 
+}
+.Content-Wrapper div:nth-child(1){
+    left: -96px;
+    animation: Squares-Movement-Child-1 1s ease infinite; 
+}
+.Content-Wrapper div:nth-child(2){
+    animation: Squares-Movement-Child-2 1s ease infinite;
+}
+@keyframes Squares-Movement-Child-4{
+    0%{
+        transform: translateY(-0px) ;
+        
+    }
+    50%{
+        transform: translateY(-46px) rotate(45deg);
+    }
+    100%{
+        
+        transform: translateY(0px) rotate(90deg);
+    }
+}
+@keyframes Squares-Movement-Child-2{
+    0%{
+        transform: rotate(-0deg);
+        
+    }
+    50%{
+        transform: rotate(-45deg);
+        
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+}
+@keyframes Squares-Movement-Child-1{
+    0%{
+        transform: translateX(0px) ;
+        
+    }
+    50%{
+        transform: translateX(-46px) rotate(45deg);
+    }
+    100%{
+        
+        transform: translateX(0px) rotate(90deg);
+    }
+}
+@keyframes Squares-Movement-Child-5{
+    0%{
+        transform: translateY(0px) ;
+        
+    }
+    50%{
+        transform: translateY(46px) rotate(45deg);
+    }
+    100%{
+        
+        transform: translateY(0px) rotate(90deg);
+    }
+}
+@keyframes Squares-Movement-Child-3{
+    0%{
+        transform: translateX(0px) ;
+        
+    }
+    50%{
+        transform: translateX(46px) rotate(45deg);
+    }
+    100%{
+        
+        transform: translateX(0px) rotate(90deg);
+    }
+}
+@keyframes Color-Animation{
+    0%{
+        background-color: #ff4686;
+    }
+    25%{
+        background-color: #00fe00;
+    }
+    50%{
+        background-color: #fffe01;
+    }
+    75%{
+        background-color: #fffdff;
+    }
+    100%{
+        background-color: #2ea1fe;
+
+    }
+}
